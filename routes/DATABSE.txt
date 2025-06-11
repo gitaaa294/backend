@@ -1,0 +1,52 @@
+CREATE DATABASE aksesoris_gisyaglow_db;
+
+USE aksesoris_gisyaglow_db;
+
+CREATE TABLE account(
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE, 
+    password VARCHAR(255) NOT NULL, 
+    role VARCHAR(5) NOT NULL
+);
+
+INSERT INTO account(username, password, role) VALUES 
+('gita', '321', 'admin'), 
+('syafira', '321', 'Admin'), 
+('Antony', 'Munyuk11', 'User');
+
+CREATE TABLE products(
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+    nama_produk VARCHAR(50), 
+    harga_produk INT, 
+    stock_produk INT
+);
+ALTER TABLE products ADD COLUMN gambar_produk VARCHAR(255);
+
+INSERT INTO products(nama_produk, harga_produk, stock_produk, gambar_produk) VALUES
+('Anting Bunga Mutiara', 15000, 25, 'anting_bunga_mutiara.jpg'),
+('Gelang Manik Warna', 12000, 30, 'gelang_manik_warna.jpg'),
+('Cincin Rose Gold', 18000, 18, 'cincin_rose_gold.jpg'),
+('Kalung Butterfly', 25000, 22, 'kalung_butterfly.jpg'),
+('Jepit Rambut Warna', 8000, 40, 'jepit_rambut_warna.jpg'),
+('Scrunchie Polos Pink', 6000, 35, 'scrunchie_polos_pink.jpg'),
+('Gelang Couple Magnet', 22000, 15, 'gelang_couple_magnet.jpg'),
+('Cincin Adjustable Love', 10000, 25, 'cincin_adjustable_love.jpg'),
+('Kalung Inisial A', 19000, 20, 'kalung_inisial_a.jpg'),
+('Anting Hoop Gold', 17000, 27, 'anting_hoop_gold.jpg'),
+('Jepit Korea Glossy', 9000, 30, 'jepit_korea_glossy.jpg'),
+('Gelang Kristal', 14000, 18, 'gelang_kristal.jpg'),
+('Cincin Kupu Elegan', 16000, 22, 'cincin_kupu_elegan.jpg'),
+('Kalung Layered Charm', 26000, 15, 'kalung_layered_charm.jpg'),
+('Scrunchie Satin', 7000, 35, 'scrunchie_satin.jpg'),
+('Bando Korea Simple', 13000, 20, 'bando_korea_simple.jpg'),
+('Gelang Rantai Mini', 11000, 17, 'gelang_rantai_mini.jpg'),
+('Anting Studs Bintang', 12000, 28, 'anting_studs_bintang.jpg'),
+('Cincin Berlian Imitasi', 20000, 19, 'cincin_berlian_imitasi.jpg'),
+('Kalung Bulan Sabit', 23000, 16, 'kalung_bulan_sabit.jpg'),
+('Gelang Tali Handmade', 9000, 25, 'gelang_tali_handmade.jpg'),
+('Jepit Kecil 6 pcs', 5000, 40, 'jepit_kecil_6pcs.jpg'),
+('Bando Mutiara Elegan', 15000, 20, 'bando_mutiara_elegan.jpg'),
+('Anting Tassel Panjang', 18000, 18, 'anting_tassel_panjang.jpg'),
+('Cincin Love Silver', 16000, 25, 'cincin_love_silver.jpg');
+
+
